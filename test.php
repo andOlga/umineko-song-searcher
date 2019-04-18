@@ -7,5 +7,6 @@ foreach ($matches as $match) {
         $thing = trim(preg_split('/\n|\,/', $match)[0]);
         preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
         echo $subMatches[1];
+        break;
     }
 }
