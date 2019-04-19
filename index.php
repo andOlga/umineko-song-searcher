@@ -21,7 +21,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  #title {
+    margin-left: 41%;
+    margin-bottom: 20px;
+  }
 </style>
+<img src='/logo.png' width='640'>
+<div id='title'>Song Searcher</div>
 <script>
   document.addEventListener('DOMContentLoaded', event => {
     document.getElementById('submit').addEventListener('click', event => {
