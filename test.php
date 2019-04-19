@@ -1,6 +1,6 @@
 <?php
 $contents = file_get_contents('0.u') . file_get_contents('0answer.u');
-$matches = preg_split('/bgm1v?/', $contents);
+$matches = preg_split('/bgm(1v?|play)/', $contents);
 foreach ($matches as $match) {
     if (stripos($match, $_POST['findstr']) !== false) {
         $subMatches = [];
