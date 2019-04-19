@@ -20,7 +20,7 @@ input[type=submit] {
     </form>
     Type some text from Umineko no Naku Koro ni to figure out the song that plays at this moment. Notes:
     <ul>
-      <li>This works only with the official translation that is published by Mangagamer.
+      <li>This works only with the official translation that is published by Mangagamer, with or without the 07th Mod patch.
         This won't work if you're reading the old Witch Hunt translation patch, UmiTweak, or Umineko Project
         due to translation differences.</li>
       <li>Pieces of text that are too long may not work (due to formatting commands appearing in the middle).</li>
