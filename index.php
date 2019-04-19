@@ -7,11 +7,11 @@ body {
   margin-right: auto;
 }
 input[type=text] {
-  width: 640px;
+  width: 100%;
   display: block;
 }
 input[type=submit] {
-  margin-left: 250px;
+  margin-left: 40%;
 }
 </style>
 <form action='/test.php' method='post'>
