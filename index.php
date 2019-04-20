@@ -25,6 +25,10 @@
     margin-left: 41%;
     margin-bottom: 20px;
   }
+
+  a, a:visited {
+    color: gray;
+  }
 </style>
 <img src='/logo.png' width='640'>
 <div id='title'>Song Searcher</div>
@@ -63,5 +67,8 @@
     <li>
       Sequences of about 5 words, give or take, tend to work correctly.
     </li>
+    <li>
+      If the search form doesn't work at all, not even producing empty results, your browser may be out of date.
+      Update it or use the <a href='/oldindex.php'>non-fancy search form</a>.
   </ul>
 </div>
