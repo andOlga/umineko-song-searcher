@@ -2,7 +2,7 @@
 $contents = file_get_contents('0.u') . file_get_contents('0answer.u');
 $matches = preg_split('/bgm(1v?|play2?)/', $contents);
 foreach ($matches as $match) {
-    if (stripos($match, $_POST['findstr']) !== false) {
+    if (stripos($match, $_REQUEST['findstr']) !== false) {
         $subMatches = [];
         $thing = trim(preg_split('/\n|\,/', $match)[0]);
         preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
