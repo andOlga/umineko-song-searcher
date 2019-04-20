@@ -49,7 +49,7 @@
 </div>
 <div id='result'></div>
 <div>
-  Type some text from Umineko no Naku Koro ni to figure out the song that plays at this moment. Notes:
+  Type some text from Umineko no Naku Koro ni to figure out the song that plays at this moment. Tips:
   <ul>
     <li>This works only with the official translation that is published by Mangagamer, with or without the 07th Mod patch.
       This won't work if you're reading the old Witch Hunt translation patch, UmiTweak, or Umineko Project
@@ -62,6 +62,10 @@
     </li>
     <li>
       Sequences of about 5 words, give or take, tend to work correctly.
+    </li>
+    <li>
+      If the search form doesn't seem to work at all (not even give an empty result), update your browser.
+      If you can't do that, you may instead use the following URL to search: <pre><?= $_SERVER['HTTP_HOST'] ?>/search.php?findstr=Your text here</pre>
     </li>
   </ul>
 </div>
