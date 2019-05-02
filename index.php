@@ -58,11 +58,11 @@
     <li>This works only with the official translation that is published by Mangagamer, with or without the 07th Mod patch.
       This won't work if you're reading the old Witch Hunt translation patch, UmiTweak, or Umineko Project
       due to translation differences.</li>
-    <li>Pieces of text that are too long may not work due to formatting commands appearing in the middle.</li>
-    <li>Pieces of text that are too short may end up with the wrong song result because they are not unique.</li>
-    <li>If the song that is found doesn't seem correct, try searching for a longer piece of text or just scroll forward/backward a bit in the game and try a different piece.</li>
+    <li>Fragments of text that are too long may not work due to formatting commands appearing in the middle.</li>
+    <li>Fragments of text that are too short may end up with the wrong song result because they are not unique.</li>
+    <li>If the song that is found doesn't seem correct, try searching for a longer fragment of text or just scroll forward/backward a bit in the game and try a different fragment.</li>
     <li>
-      Generally, a piece of text corresponding to a single voice clip in 07th Mod should work. It may or may not be a complete sentence.
+      Generally, a fragment of text corresponding to a single voice clip in 07th Mod should work. It may or may not be a complete sentence.
     </li>
     <li>
       Sequences of about 5 words, give or take, tend to work correctly.
