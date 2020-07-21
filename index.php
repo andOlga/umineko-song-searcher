@@ -69,7 +69,7 @@
     </li>
     <li>
       If the search form doesn't work at all, not even producing empty results, your browser may be out of date.
-      Update it or use the <a href='/oldindex.php'>non-fancy search form</a>.
+      <a href="https://updatemybrowser.org/">Update it</a> or use the <a href='/oldindex.php'>non-fancy search form</a>.
     </li>
   </ul>
 </div>
