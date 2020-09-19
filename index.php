@@ -33,17 +33,19 @@
 <img src='/logo.png' width='640'>
 <div id='title'>Song Searcher</div>
 <script>
+  let firstSearch = true
   document.addEventListener('DOMContentLoaded', event => {
     document.getElementById('submit').addEventListener('click', event => {
       let fd = new FormData()
       let result = document.getElementById('result')
-      result.innerText = 'Searching...'
+      result.innerText = firstSearch ? 'Caching script files...' : 'Searching...'
       fd.append('findstr', document.getElementById('findstr').value)
       fetch('/search.php', {
         method: 'POST',
         body: fd
       }).then(response => response.text().then(t => {
         result.innerText = `Search result: ${t}`
+        firstSearch = false
       }))
     })
   })
