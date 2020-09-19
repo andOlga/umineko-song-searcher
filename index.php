@@ -38,7 +38,7 @@
     document.getElementById('submit').addEventListener('click', event => {
       let fd = new FormData()
       let result = document.getElementById('result')
-      result.innerText = firstSearch ? 'Caching script files...' : 'Searching...'
+      result.innerText = firstSearch ? 'Downloading newest script files...' : 'Searching...'
       fd.append('findstr', document.getElementById('findstr').value)
       fetch('/search.php', {
         method: 'POST',
