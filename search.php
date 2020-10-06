@@ -2,7 +2,7 @@
 $fileMap = [
     '0question.u' => 'http://07th-mod.com/download.php?repository=umineko-question&file=master/InDevelopment/ManualUpdates/0.utf',
     '0answer.u' => 'http://07th-mod.com/download.php?repository=umineko-answer&file=adv_mode/0.utf',
-    'bgmtitles' => 'https://raw.githubusercontent.com/ooa113y/umiproj-wh-tl/master/script/wh/code.txt'
+    'bgmtitles' => 'http://raw.githubusercontent.com/ooa113y/umiproj-wh-tl/master/script/wh/code.txt'
 ];
 $contents = '';
 
