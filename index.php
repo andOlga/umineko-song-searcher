@@ -59,7 +59,7 @@
   Type some text from Umineko no Naku Koro ni to figure out the song that plays at this moment. Notes:
   <ul>
     <li>This works only with the official translation that is published by Mangagamer, with or without the 07th Mod patch.
-      This won't work if you're using the old Witch Hunt translation patch, UmiTweak, or something else
+      This won't work if you're using the old Witch Hunt translation patch, UmiTweak, or Umineko Project
       due to translation differences.</li>
     <li>Fragments of text that are too long may not work due to formatting commands appearing in the middle.</li>
     <li>Fragments of text that are too short may end up with the wrong song result because they are not unique.</li>
@@ -74,5 +74,6 @@
       If the search form doesn't work at all, not even producing empty results, your browser may be out of date.
       <a href="https://updatemybrowser.org/">Update it</a> or use the <a href='/oldindex.php'>non-fancy search form</a>.
     </li>
-  </ul>
+  </ul><br>
+  If you are interested in a full English port of the PS3 version of Umineko to PC, which includes built-in song title display, lip sync, and various beautiful visual effects that cannot be found in other versions, I recommend to check out <a href='https://umineko-project.org'>Umineko Project</a> and <a href='https://github.com/ooa113y/umiproj-wh-tl'>my port of the official translation</a> to that engine.
 </div>
