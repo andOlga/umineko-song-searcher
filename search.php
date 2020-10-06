@@ -20,7 +20,7 @@ foreach ($matches as $match) {
     if (stripos($match, $_POST['findstr']) !== false) {
         $subMatches = [];
         $thing = trim(preg_split('/\n|\,/', $match)[0]);
-        $title = "Full title not found";
+        $title = "";
         if ($thing == 1) $title = "Thunberg Lily";
         if ($thing == 2) $title = "Door of Summer";
         if ($thing == 3) $title = "HANE (Feathers)";
@@ -218,7 +218,7 @@ foreach ($matches as $match) {
         if ($thing == 1010) $title = "Bring The Fate";
         if ($thing == 1013) $title = "Bring The Fate(Ver chiru)";
         preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
-        echo $subMatches[1] . " (" . $title . ")";
+        echo $title ? ("$title (" . $subMatches[1] . ")") : $subMatches[1];
         break;
     }
 }
