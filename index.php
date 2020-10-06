@@ -74,7 +74,7 @@
       If the search form doesn't work at all, not even producing empty results, your browser may be out of date.
       <a href="https://updatemybrowser.org/">Update it</a> or use the <a href='/oldindex.php'>non-fancy search form</a>.
     </li>
-  </ul><br>
-  The source code for this app is <a href="https://github.com/ooa113y/umineko-song-searcher">available</a>, but awful.<br>
-  If you are interested in a full English port of the PS3 version of Umineko to PC, which includes built-in song title display, lip sync, and various beautiful visual effects that cannot be found in other versions, I recommend to check out <a href='https://umineko-project.org'>Umineko Project</a> and <a href='https://github.com/ooa113y/umiproj-wh-tl'>my port of the official translation</a> to that engine.
+  </ul>
+  <div>The source code for this app is <a href="https://github.com/ooa113y/umineko-song-searcher">available</a>, but awful.</div>
+  <div>If you are interested in a full English port of the PS3 version of Umineko to PC, which includes built-in song title display, lip sync, and various beautiful visual effects that cannot be found in other versions, I recommend to check out <a href='https://umineko-project.org'>Umineko Project</a> and <a href='https://github.com/ooa113y/umiproj-wh-tl'>my port of the official translation</a> to that engine.</div>
 </div>
