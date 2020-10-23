@@ -218,7 +218,8 @@ foreach ($matches as $match) {
         if ($thing == 1010) $title = "Bring The Fate";
         if ($thing == 1013) $title = "Bring The Fate(Ver chiru)";
         preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
-        echo $title ? ("$title (" . $subMatches[1] . ")") : $subMatches[1];
+        $fileName = str_replace('\\', '/', $subMatches[1]);
+        echo $title ? "$title ($fileName)" : $fileName;
         break;
     }
 }
