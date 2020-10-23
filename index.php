@@ -56,16 +56,16 @@
 </div>
 <div id='result'></div>
 <div>
-  Type some text from Umineko no Naku Koro ni to figure out the song that plays at this moment. Notes:
+  Type some text from <nobr>Umineko no Naku Koro ni</nobr> to figure out the song that plays at this moment. Notes:
   <ul>
-    <li>This works only with the official translation that is published by Mangagamer, with or without the 07th Mod patch.
-      This won't work if you're using the old Witch Hunt translation patch, UmiTweak, or Umineko Project
+    <li>This works only with the official translation that is published by Mangagamer, with or without the <nobr>07th-Mod</nobr> patch.
+      This won't work if you're using the old <nobr>Witch Hunt</nobr> translation patch, UmiTweak, or <nobr>Umineko Project</nobr>
       due to translation differences.</li>
     <li>Fragments of text that are too long may not work due to formatting commands appearing in the middle.</li>
     <li>Fragments of text that are too short may end up with the wrong song result because they are not unique.</li>
     <li>If the song that is found doesn't seem correct, try searching for a longer Fragment of text or just scroll forward/backward a bit in the game and try a different Fragment.</li>
     <li>
-      Generally, a Fragment of text corresponding to a single voice clip in 07th Mod should work. It may or may not be a complete sentence.
+      Generally, a Fragment of text corresponding to a single voice clip in <nobr>07th-Mod</nobr> should work. It may or may not be a complete sentence.
     </li>
     <li>
       Sequences of about 5 words, give or take, tend to work correctly.
@@ -76,5 +76,5 @@
     </li>
   </ul>
   <div style='margin-bottom: 5px'>The source code for this app is <a href="https://github.com/ooa113y/umineko-song-searcher">available</a>, but awful.</div>
-  <div>If you are interested in a full English port of the PS3 version of Umineko to PC, which includes built-in song title display, lip sync, and various beautiful visual effects that cannot be found in other versions, I recommend to check out <a href='https://umineko-project.org'>Umineko Project</a> and <a href='https://github.com/ooa113y/umiproj-wh-tl'>my port of the official translation</a> to that engine.</div>
+  <div>If you are interested in a full English port of the PS3 version of Umineko to PC, which includes built-in song title display, lip sync, and various beautiful visual effects that cannot be found in other versions, I recommend to check out <a href='https://umineko-project.org'><nobr>Umineko Project</nobr></a> and <a href='https://github.com/ooa113y/umiproj-wh-tl'>my port of the official translation</a> to that engine.</div>
 </div>
