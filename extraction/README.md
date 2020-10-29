@@ -1,5 +1,5 @@
 This folder contains a set of batch scripts to help you extract the Umineko soundtrack,
-with filenames matching the names of the actual songs, from your game installation.
+with filenames matching the names of the actual songs and sorted in order of in-game appearance, from your game installation.
 
 If you are using Umineko Project, download `umineko-project.bat`. You have to be on `v8.1b` or later.
 
