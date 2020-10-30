@@ -1,13 +1,13 @@
-ECHO OFF
+echo OFF
 CLS
-ECHO NOTE: This is meant to be used on the Steam Answer Arcs installation or Umineko Project (v8.1b).
-ECHO This will "work" on Steam Question arcs, but many tracks will be missing.
-ECHO This will NOT work on the original Japanese release.
-ECHO Make sure this script is in the root game folder (where the .exe is) and
+echo NOTE: This is meant to be used on the Steam Answer Arcs installation or Umineko Project (v8.1b).
+echo This will "work" on Steam Question arcs, but many tracks will be missing.
+echo This will NOT work on the original Japanese release.
+echo Make sure this script is in the root game folder (where the .exe is) and
 PAUSE
 CLS
-ECHO Please wait while the soundtrack is being extracted...
-MKDIR soundtrack
+echo Please wait while the soundtrack is being extracted...
+mkdir soundtrack
 COPY "bgm\tsubaki.ogg" "soundtrack\1 - Thunberg Lily.ogg" > nul 
 COPY "bgm\natsu_no_tobira.ogg" "soundtrack\2 - Door of Summer.ogg" > nul 
 COPY "bgm\HANE.ogg" "soundtrack\3 - HANE (Feathers).ogg" > nul 
