@@ -12,9 +12,7 @@ echo "Press Enter to continue..."
 read trash
 echo "Please wait while the soundtrack is being extracted..."
 cp extract.bat extract_real.sh
-sed -ri 's/^echo .+//g' extract_real.sh
-sed -i 's/CLS//g' extract_real.sh
-sed -i 's/PAUSE//g' extract_real.sh
+sed -i '1,9d' extract_real.sh
 sed -i 's/COPY/cp/g' extract_real.sh
 sed -i 's|\\|/|g' extract_real.sh
 sed -i 's/EXPLORER/xdg-open/g' extract_real.sh
