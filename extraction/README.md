@@ -14,4 +14,4 @@ Despite the script supporting the Steam version, Umineko Project is the recommen
 
 To use the script, download `extract.bat`, place it in your game folder (where the .exe is) and double-click it to run.
 It will extract the soundtrack files and open the folder with them.
-If you are on a UNIX-like system, place `extract.sh` alongside `extract.bat` and run that instead.
+If you are on a UNIX-like system, use `extract.sh` instead.
