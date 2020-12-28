@@ -1,4 +1,4 @@
-echo "NOTE: This is meant to be used on the Steam Answer Arcs installation or Umineko Project (v8.1b)."
+echo "NOTE: This is meant to be used on the Steam Answer Arcs installation or Umineko Project (v8.1b or later)."
 echo 'This will "work" on Steam Question arcs, but many tracks will be missing.'
 echo "This will NOT work on the original Japanese release."
 echo "Make sure this script is in the root game folder (where the .exe is) and"
