@@ -79,5 +79,4 @@
     </li>
   </ul>
   <div style='margin-bottom: 5px'>The source code for this app is <a href="https://github.com/ooa113y/umineko-song-searcher">available</a>.</div>
-  <div>If you are interested in a full English port of the PS3 version of Umineko to PC, which includes built-in song title display, lip sync, and various beautiful visual effects that cannot be found in other versions, I recommend to check out <a href='https://umineko-project.org'><nobr>Umineko Project</nobr></a>.</div>
 </div>
