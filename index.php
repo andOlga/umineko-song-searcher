@@ -72,7 +72,7 @@
     </li>
     <li>
       If the search form doesn't work at all, not even producing empty results, your browser may be out of date.
-      <a href="https://updatemybrowser.org/">Update it</a> or use the <a href='/oldindex.php'>non-fancy search form</a>.
+      Update it or use the <a href='/oldindex.php'>non-fancy search form</a>.
     </li>
     <li>
       If you would like to extract the music files from the game with sensible filenames, please check out the <a href="https://github.com/ooa113y/umineko-song-searcher/tree/master/extraction">extraction scripts</a>.
