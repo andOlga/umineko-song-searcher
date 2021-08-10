@@ -34,6 +34,7 @@
     color: red;
   }
 </style>
+<title>Umineko Song Searcher</title>
 <img src='/logo.png' width='640'>
 <div id='title'>Song Searcher</div>
 <script>
