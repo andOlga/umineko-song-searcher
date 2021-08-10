@@ -26,26 +26,29 @@
     margin-bottom: 20px;
   }
 
-  a, a:visited {
+  #rules a, #rules a:visited {
     color: gray;
+  }
+
+  #result a, #result a:visited {
+    color: red;
   }
 </style>
 <img src='/logo.png' width='640'>
 <div id='title'>Song Searcher</div>
 <script>
-  let firstSearch = true
   document.addEventListener('DOMContentLoaded', event => {
     document.getElementById('submit').addEventListener('click', event => {
       let fd = new FormData()
       let result = document.getElementById('result')
-      result.innerText = firstSearch ? 'Downloading newest script files...' : 'Searching...'
+      result.innerText = 'Searching...'
       fd.append('findstr', document.getElementById('findstr').value)
+      fd.append('fancy', 'yes')
       fetch('/search.php', {
         method: 'POST',
         body: fd
-      }).then(response => response.text().then(t => {
-        result.innerText = `Search result: ${t}`
-        firstSearch = false
+      }).then(response => response.json().then(data => {
+        result.innerHTML = `Search result: <a href="https://youtu.be/${data.yt}" target=_blank>${data.title}</a> (${data.bgm})`
       }))
     })
   })
@@ -55,7 +58,7 @@
   <button id='submit' type='button'>Search</button>
 </div>
 <div id='result'></div>
-<div>
+<div id='rules'>
   Type some text from <nobr>Umineko no Naku Koro ni</nobr> to figure out the song that plays at this moment. Notes:
   <ul>
     <li>This works only with the official translation that is published by Mangagamer, with or without the <nobr>07th-Mod</nobr> patch.
