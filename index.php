@@ -1,9 +1,3 @@
-<?php
-if (empty($_SERVER['HTTPS'])) {
-  header('Location: https://umineko-song-searcher.herokuapp.com');
-  die;
-}
-?>
 <style>
   body {
     color: gray;
@@ -44,6 +38,9 @@ if (empty($_SERVER['HTTPS'])) {
 <img src='/logo.png' width='640'>
 <div id='title'>Song Searcher</div>
 <script>
+  if (new URL(location.href).protocol !== 'https:') {
+    location.href = location.href.replace('http://', 'https://');
+  }
   document.addEventListener('DOMContentLoaded', event => {
     document.getElementById('submit').addEventListener('click', event => {
       let fd = new FormData()
