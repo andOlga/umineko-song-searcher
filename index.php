@@ -33,6 +33,12 @@
   #result a, #result a:visited {
     color: red;
   }
+
+  #yt {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 </style>
 <title>Umineko Song Searcher</title>
 <img src='/logo.png' width='640'>
@@ -47,12 +53,14 @@
       let result = document.getElementById('result')
       result.innerText = 'Searching...'
       fd.append('findstr', document.getElementById('findstr').value)
-      fd.append('fancy', 'yes')
       fetch('/search.php', {
         method: 'POST',
         body: fd
       }).then(response => response.json().then(data => {
-        result.innerHTML = `Search result: <a href="https://youtu.be/${data.yt}" target=_blank>${data.title}</a> (${data.bgm})`
+        result.innerHTML = `Search result: ${data.title} (${data.bgm})<br>`
+        let template = document.createElement('template')
+        template.innerHTML = `<iframe id=yt width="560" height="315" src="https://www.youtube-nocookie.com/embed/${data.yt}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        result.appendChild(template.content)
       }))
     })
   })

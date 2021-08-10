@@ -13,11 +13,7 @@ foreach ($matches as $match) {
         $yt = explode('&', str_replace('https://www.youtube.com/watch?v=', '', $ytMap[$thing]))[0];
         preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
         $fileName = str_replace('\\', '/', $subMatches[1]);
-        if ($_POST['fancy']) {
-            echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT);
-        } else {
-            echo "$title ($fileName)";
-        }
+        echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT);
         break;
     }
 }
