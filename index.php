@@ -1,3 +1,9 @@
+<?php
+if (empty($_SERVER['HTTPS'])) {
+  header('Location: https://umineko-song-searcher.herokuapp.com');
+  die;
+}
+?>
 <style>
   body {
     color: gray;
