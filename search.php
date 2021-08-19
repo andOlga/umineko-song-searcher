@@ -15,7 +15,7 @@ foreach ($matches as $match) {
         $fileName = str_replace('\\', '/', $subMatches[1]);
         if ($title && $fileName && $yt) {
             echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT);
+            break;
         }
-        break;
     }
 }
