@@ -15,7 +15,7 @@ foreach ($matches as $match) {
         $fileName = str_replace('\\', '/', $subMatches[1]);
         if ($title && $fileName && $yt) {
             header('Content-Type: application/json');
-            echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT);
+            echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
             break;
         }
     }
