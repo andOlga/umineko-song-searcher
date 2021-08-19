@@ -51,7 +51,7 @@
       let fd = new FormData()
       let result = document.getElementById('result')
       result.innerText = 'Searching...'
-      fd.append('findstr', document.getElementById('findstr').value)
+      fd.append('q', document.getElementById('findstr').value)
       fetch('/search.php', {
         method: 'POST',
         body: fd
