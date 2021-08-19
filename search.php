@@ -14,6 +14,7 @@ foreach ($matches as $match) {
         preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
         $fileName = str_replace('\\', '/', $subMatches[1]);
         if ($title && $fileName && $yt) {
+            header('Content-Type: application/json');
             echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT);
             break;
         }
