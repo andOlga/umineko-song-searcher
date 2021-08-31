@@ -64,7 +64,7 @@
       })).catch(err => { result.innerHTML = 'Nothing found.' })
     }
     document.getElementById('submit').addEventListener('click', event => {
-      location.search = document.getElementById('findstr').value
+      location.search = 'q=' + document.getElementById('findstr').value
     })
   })
 </script>
