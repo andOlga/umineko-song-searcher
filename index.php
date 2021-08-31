@@ -63,14 +63,13 @@
         result.appendChild(template.content)
       })).catch(err => { result.innerHTML = 'Nothing found.' })
     }
-    document.getElementById('submit').addEventListener('click', event => {
-      location.search = 'q=' + document.getElementById('q').value
-    })
   })
 </script>
 <div>
-  <input type='text' id='q'>
-  <button id='submit' type='button'>Search</button>
+  <form>
+    <input type='text' id='q'>
+    <input type=submit>Submit</input>
+  </form>
 </div>
 <div id='result'></div>
 <div id='rules'>
