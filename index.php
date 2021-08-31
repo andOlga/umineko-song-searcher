@@ -7,7 +7,7 @@
     margin-right: auto;
   }
 
-  #findstr {
+  #q {
     width: 100%;
     display: block;
   }
@@ -64,12 +64,12 @@
       })).catch(err => { result.innerHTML = 'Nothing found.' })
     }
     document.getElementById('submit').addEventListener('click', event => {
-      location.search = 'q=' + document.getElementById('findstr').value
+      location.search = 'q=' + document.getElementById('q').value
     })
   })
 </script>
 <div>
-  <input type='text' id='findstr'>
+  <input type='text' id='q'>
   <button id='submit' type='button'>Search</button>
 </div>
 <div id='result'></div>
