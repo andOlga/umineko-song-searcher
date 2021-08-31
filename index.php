@@ -47,14 +47,6 @@
   if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
     location.protocol = 'https:' // Heroku doesn't do this by itself...
   }
-  document.addEventListener('DOMContentLoaded', event => {
-        let data = <?= search($_GET['q']) ?>;
-        if (!data) return
-        result.innerHTML = `Search result: ${data.title} (${data.bgm})<br>`
-        let template = document.createElement('template')
-        template.innerHTML = `<iframe id=yt width="640" height="315" src="https://www.youtube-nocookie.com/embed/${data.yt}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-        result.appendChild(template.content)
-  })
 </script>
 <div>
   <form autocomplete="off">
@@ -62,7 +54,17 @@
     <input id='submit' type='submit'>
   </form>
 </div>
-<div id='result'></div>
+<div id='result'>
+  <?php
+    $result = search($_GET['q']);
+    if ($result === false):
+  ?>
+      Nothing found.
+  <?php else if ($result): ?>
+    Search result: <?= $result['title'] ?> (<?= $result['bgm'] ?>)
+    <iframe id=yt width="640" height="315" src="https://www.youtube-nocookie.com/embed/<?= $result['yt'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <?php endif ?>
+</div>
 <div id='rules'>
   Type some text from <nobr>Umineko no Naku Koro ni</nobr> to figure out the song that plays at this moment. Notes:
   <ul>

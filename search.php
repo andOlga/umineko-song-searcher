@@ -2,8 +2,7 @@
 function search($query)
 {
     if (!$query) {
-        echo json_encode(null);
-        return;
+        return null;
     }
 
     $contents = file_get_contents('script.u');
@@ -21,14 +20,10 @@ function search($query)
             preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
             $fileName = str_replace('\\', '/', $subMatches[1]);
             if ($title && $fileName && $yt) {
-                echo json_encode(['title' => $title, 'bgm' => $fileName, 'yt' => $yt], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-                $found = true;
-                break;
+                return ['title' => $title, 'bgm' => $fileName, 'yt' => $yt];
             }
         }
     }
 
-    if (!$found) {
-        echo json_encode(null);
-    }
+    return false;
 }
