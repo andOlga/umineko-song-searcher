@@ -66,8 +66,8 @@
   })
 </script>
 <div>
-  <form>
-    <input type='text' id='q'>
+  <form autocomplete="off">
+    <input type='text' id='q' name='q'>
     <input id='submit' type='submit'>
   </form>
 </div>
