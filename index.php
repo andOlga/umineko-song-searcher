@@ -1,3 +1,4 @@
+<?php require('search.php'); ?>
 <style>
   body {
     color: gray;
@@ -47,22 +48,12 @@
     location.protocol = 'https:' // Heroku doesn't do this by itself...
   }
   document.addEventListener('DOMContentLoaded', event => {
-    let q = new URL(location.href).searchParams.get('q')
-    if (q) {
-      let fd = new FormData()
-      let result = document.getElementById('result')
-      result.innerText = 'Searching...'
-      fd.append('q', q)
-      fetch('/search.php', {
-        method: 'POST',
-        body: fd
-      }).then(response => response.json().then(data => {
+        let data = <?= search($_GET['q']) ?>
+        if (!data) return
         result.innerHTML = `Search result: ${data.title} (${data.bgm})<br>`
         let template = document.createElement('template')
         template.innerHTML = `<iframe id=yt width="640" height="315" src="https://www.youtube-nocookie.com/embed/${data.yt}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         result.appendChild(template.content)
-      })).catch(err => { result.innerHTML = 'Nothing found.' })
-    }
   })
 </script>
 <div>
