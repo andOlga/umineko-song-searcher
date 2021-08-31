@@ -48,7 +48,7 @@
     location.protocol = 'https:' // Heroku doesn't do this by itself...
   }
   document.addEventListener('DOMContentLoaded', event => {
-        let data = <?= search($_GET['q']) ?>
+        let data = <?= search($_GET['q']) ?>;
         if (!data) return
         result.innerHTML = `Search result: ${data.title} (${data.bgm})<br>`
         let template = document.createElement('template')
