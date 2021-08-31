@@ -68,7 +68,7 @@
 <div>
   <form>
     <input type='text' id='q'>
-    <input type=submit>Submit</input>
+    <input id='submit' type='submit'>
   </form>
 </div>
 <div id='result'></div>
