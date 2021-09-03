@@ -10,7 +10,6 @@ function search($query)
     $ytMap = require('ytmap.php');
 
     $matches = preg_split('/bgm(1v?|play2?)/', $contents);
-    $found = false;
     foreach ($matches as $match) {
         if (stripos($match, $query) !== false) {
             $subMatches = [];
