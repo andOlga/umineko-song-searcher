@@ -15,7 +15,7 @@ function search($query)
             $subMatches = [];
             $thing = trim(preg_split('/\n|\,/', $match)[0]);
             $title = $nameMap[$thing];
-            $yt = explode('&', str_replace('https://www.youtube.com/watch?v=', '', $ytMap[$thing]))[0];
+            $yt = $ytMap[$thing];
             preg_match("/BGM_s_Ch = $thing\s+mov.+\"(.+)\"/", $contents, $subMatches);
             $fileName = str_replace('\\', '/', $subMatches[1]);
             if ($title && $fileName && $yt) {
