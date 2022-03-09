@@ -69,8 +69,9 @@
   Type some text from <nobr>Umineko no Naku Koro ni</nobr> to figure out the song that plays at this moment. Notes:
   <ul>
     <li>This works only with the official translation that is published by Mangagamer, with or without the <nobr>07th-Mod</nobr> patch.
-      This won't work if you're using the old <nobr>Witch Hunt</nobr> translation patch, UmiTweak, or <nobr>Umineko Project</nobr>
-      due to translation differences.</li>
+      This won't work if you're using the old <nobr>Witch Hunt</nobr> translation patch or UmiTweak due to translation differences.
+      <nobr>Umineko Project</nobr> and the PS4/Switch release are also unsupported, though those have built-in track name display while a song plays so you won't need this.
+    </li>
     <li>Fragments of text that are too long may not work due to formatting commands appearing in the middle.</li>
     <li>Fragments of text that are too short may end up with the wrong song result because they are not unique.</li>
     <li>If the song that is found doesn't seem correct, try searching for a longer Fragment of text or just scroll forward/backward a bit in the game and try a different Fragment.</li>
@@ -83,6 +84,7 @@
     <li>
       If you would like to extract the music files from the game with sensible filenames, please check out the <a href="https://github.com/ooa113y/umineko-song-searcher/tree/master/extraction">extraction scripts</a>.
     </li>
+    <li>If you would like to play a much better version of Umineko, with built-in track name display, extra content, animations and major UI improvements, buy the Switch version of the game and <a href="https://github.com/ooa113y/umineko-catbox-english">patch it</a> into English.</li>
   </ul>
   <div style='margin-bottom: 5px'>The source code for this app is <a href="https://github.com/ooa113y/umineko-song-searcher">available</a>.</div>
 </div>
