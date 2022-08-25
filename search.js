@@ -421,8 +421,9 @@ async function search (query) {
       const thing = match.split(/\n|,/m)[0].trim()
       const title = nameMap[thing]
       const yt = ytMap[thing]
-      const filename = contents.match(new RegExp(`BGM_s_Ch = ${thing}\\s+mov.+"(.+)"`))[1].replace(/\\/g, '/')
+      let filename = contents.match(new RegExp(`BGM_s_Ch = ${thing}\\s+mov.+"(.+)"`))
       if (title && filename && yt) {
+        filename = filename[1].replace(/\\/g, '/')
         return { title, filename, yt }
       } else {
         return null
