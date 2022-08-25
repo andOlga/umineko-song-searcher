@@ -25,6 +25,7 @@ async function addResult (q) {
   document.getElementById('result').style.display = 'block'
   const rt = document.getElementById('resultText')
   const yt = document.getElementById('yt')
+  rt.innerText = 'Searching, please wait...'
   const data = await search(q)
   if (data) {
     rt.innerText = `Search result: ${data.title} (${data.filename})`
@@ -35,9 +36,11 @@ async function addResult (q) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', event => {
-  const q = new URLSearchParams(document.location.search).get('q')
-  if (q) {
-    addResult(q)
-  }
-})
+if (document) {
+  document.addEventListener('DOMContentLoaded', event => {
+    const q = new URLSearchParams(document.location.search).get('q')
+    if (q) {
+      addResult(q)
+    }
+  })
+}
