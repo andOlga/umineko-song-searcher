@@ -1,5 +1,5 @@
 // #region maps
-const ytMap = { // eslint-disable-line no-unused-vars
+const ytMap = {
   1: 'jEUw0YgN-h4',
   2: '7sxfABkV3oU',
   3: 'vRaNer0BgwY',
@@ -198,7 +198,7 @@ const ytMap = { // eslint-disable-line no-unused-vars
   1013: 'EWDpCAt2LGI'
 }
 
-const nameMap = { // eslint-disable-line no-unused-vars
+const nameMap = {
   1: 'Thunberg Lily',
   2: 'Door of Summer',
   3: 'HANE (Feathers)',
