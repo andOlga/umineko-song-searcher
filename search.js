@@ -435,7 +435,7 @@ async function addResult (q) {
   document.getElementById('result').style.display = 'block'
   const rt = document.getElementById('resultText')
   const yt = document.getElementById('yt')
-  rt.innerText = 'Downloading script, please wait...'
+  rt.innerText = 'Downloading game script, please wait...'
   const data = await search(q)
   if (data) {
     rt.innerText = `Search result: ${data.title} (${data.filename})`
