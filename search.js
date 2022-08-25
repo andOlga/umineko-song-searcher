@@ -448,6 +448,7 @@ async function addResult (q) {
 
 if (isGui) {
   document.addEventListener('DOMContentLoaded', event => {
+    document.getElementById('q').focus()
     const q = new URLSearchParams(document.location.search).get('q')
     if (q) {
       addResult(q)
