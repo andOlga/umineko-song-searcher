@@ -1,4 +1,3 @@
-<?php require('search.php'); ?>
 <style>
   body {
     color: gray;
@@ -41,29 +40,17 @@
   }
 </style>
 <title>Umineko Song Searcher</title>
-<img src='/logo.png' width='640'>
+<img src='logo.png' width='640'>
 <div id='title'>Song Searcher</div>
-<script>
-  if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
-    location.protocol = 'https:' // Heroku doesn't do this by itself...
-  }
-</script>
 <div>
   <form autocomplete="off">
     <input type='text' id='q' name='q'>
     <input id='submit' type='submit'>
   </form>
 </div>
-<div id='result'>
-  <?php
-    $result = search($_GET['q']);
-    if ($result === false):
-  ?>
-      Nothing found.
-  <?php elseif ($result): ?>
-    Search result: <?= $result['title'] ?> (<?= $result['bgm'] ?>)
-    <iframe id=yt width="640" height="315" src="https://www.youtube-nocookie.com/embed/<?= $result['yt'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <?php endif ?>
+<div id='result' style='display: none;'>
+    <div id='resultText'></div>
+    <iframe id=yt width="640" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div id='rules'>
   Type some text from <nobr>Umineko no Naku Koro ni</nobr> to figure out the song that plays at this moment. Notes:
@@ -88,3 +75,4 @@
   </ul>
   <div style='margin-bottom: 5px'>The source code for this app is <a href="https://github.com/ooa113y/umineko-song-searcher">available</a>.</div>
 </div>
+<script src='search.js'></script>
