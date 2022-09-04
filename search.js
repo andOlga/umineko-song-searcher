@@ -401,10 +401,11 @@ const nameMap = {
 const isGui = typeof document !== 'undefined'
 
 async function getScript () {
+  const scriptFile = 'script.txt'
   if (isGui) {
-    return await fetch('script.u')
+    return await fetch(scriptFile)
   } else {
-    const script = require('fs').readFileSync('script.u', 'utf-8')
+    const script = require('fs').readFileSync(scriptFile, 'utf-8')
     return { ok: true, text: () => script }
   }
 }
