@@ -21,8 +21,8 @@ async function search (query) {
   for (const match of matches) {
     if (match.includes(query)) {
       const thing = match.split(/\n|,/m)[0].trim()
-      const title = songs[thing].name
-      const yt = songs[thing].yt
+      const title = songs[thing]?.name
+      const yt = songs[thing]?.yt
       let filename = contents.match(new RegExp(`BGM_s_Ch = ${thing}\\s+mov.+"(.+)"`))
       if (title && filename && yt) {
         filename = filename[1].replace(/\\/g, '/')
