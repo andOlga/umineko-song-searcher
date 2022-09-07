@@ -20,10 +20,10 @@ async function search (query) {
   const matches = contents.toLowerCase().split(/bgm1v?|bgmplay2?/m)
   for (const match of matches) {
     if (match.includes(query)) {
-      const thing = match.split(/\n|,/m)[0].trim()
-      const title = songs[thing]?.name
-      const yt = songs[thing]?.yt
-      let filename = contents.match(new RegExp(`BGM_s_Ch = ${thing}\\s+mov.+"(.+)"`))
+      const songId = match.split(/\n|,/m)[0].trim()
+      const title = songs[songId]?.name
+      const yt = songs[songId]?.yt
+      let filename = contents.match(new RegExp(`BGM_s_Ch = ${songId}\\s+mov.+"(.+)"`))
       if (title && filename && yt) {
         filename = filename[1].replace(/\\/g, '/')
         return { title, filename, yt }
@@ -44,7 +44,7 @@ async function addResult (q) {
     rt.innerText = `Search result: ${data.title} (${data.filename})`
     yt.src = `https://www.youtube-nocookie.com/embed/${data.yt}`
   } else {
-    rt.innerText = 'Nothing found.'
+    rt.innerText = 'NosongId found.'
     yt.src = 'https://www.youtube-nocookie.com/embed/bnH9Gbw4ybk'
   }
 }
