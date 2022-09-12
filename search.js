@@ -44,7 +44,7 @@ async function addResult (q) {
     rt.innerText = `Search result: ${data.title} (${data.filename})`
     yt.src = `https://www.youtube-nocookie.com/embed/${data.yt}`
   } else {
-    rt.innerText = 'NosongId found.'
+    rt.innerText = 'Nothing found.'
     yt.src = 'https://www.youtube-nocookie.com/embed/bnH9Gbw4ybk'
   }
 }
