@@ -1,19 +1,8 @@
-const isGui = typeof document !== 'undefined'
-
-async function getFile (file) {
-  if (isGui) {
-    return await fetch(file)
-  } else {
-    const text = require('fs').readFileSync(file, 'utf-8')
-    return { ok: true, text: () => text, json: () => JSON.parse(text) }
-  }
-}
-
 async function search (query) {
   if (!query) return null
   query = query.toLowerCase()
-  const scriptResp = await getFile('script.txt')
-  const songResp = await getFile('songs.json')
+  const scriptResp = await fetch('script.txt')
+  const songResp = await fetch('songs.json')
   if (!scriptResp.ok || !songResp.ok) return null
   const contents = await scriptResp.text()
   const songs = await songResp.json()
@@ -49,15 +38,10 @@ async function addResult (q) {
   }
 }
 
-if (isGui) {
-  document.addEventListener('DOMContentLoaded', event => {
-    document.getElementById('q').focus()
-    const q = new URLSearchParams(document.location.search).get('q')
-    if (q) {
-      addResult(q)
-    }
-  })
-} else {
-  const q = process.argv[2]
-  search(q).then(console.dir)
-}
+document.addEventListener('DOMContentLoaded', event => {
+  document.getElementById('q').focus()
+  const q = new URLSearchParams(document.location.search).get('q')
+  if (q) {
+    addResult(q)
+  }
+})
