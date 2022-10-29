@@ -40,7 +40,7 @@ async function addResult (q) {
 
 document.addEventListener('DOMContentLoaded', event => {
   if (window.location.protocol === 'file:') {
-    document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Use a web server, such as <a href=https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb>this</a> instead.')
+    document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Instead, please open a terminal in the folder and run <pre>python -m http.server</pre>, and navigate to the URL shown.')
     return
   }
   document.getElementById('q').focus()
