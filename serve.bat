@@ -9,4 +9,5 @@ exit
 echo We need to run some initial setup. Please press any key, click the "Install" button in the window that shows,
 echo and then run this script again after it's done.
 pause > nul
+REM This will open the Microsoft Store with the Python installer:
 python3
