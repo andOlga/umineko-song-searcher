@@ -34,7 +34,7 @@ async function addResult (q) {
     yt.src = `https://www.youtube-nocookie.com/embed/${data.yt}`
   } else {
     rt.innerText = 'Nothing found.'
-    yt.src = 'https://www.youtube-nocookie.com/embed/bnH9Gbw4ybk'
+    yt.src = 'https://www.youtube-nocookie.com/embed/bnH9Gbw4ybk?autoplay=1'
   }
 }
 
