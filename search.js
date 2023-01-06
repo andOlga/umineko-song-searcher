@@ -39,9 +39,6 @@ async function addResult (q) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
-  document.body.addEventListener('contextmenu', event => {
-    event.preventDefault()
-  })
   if (window.location.protocol === 'file:') {
     document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Please use the executables instead.')
     return
