@@ -39,8 +39,11 @@ async function addResult (q) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
+  document.body.addEventListener('contextmenu', event => {
+    event.preventDefault()
+  })
   if (window.location.protocol === 'file:') {
-    document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Instead, please open a terminal in the folder and run serve.bat (on Windows) or serve.sh (on Linux).')
+    document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Please use the executables instead.')
     return
   }
   document.getElementById('q').focus()
