@@ -24,6 +24,7 @@ async function search (query) {
 }
 
 async function addResult (q) {
+  document.body.style.cursor = 'wait'
   document.getElementById('result').style.display = 'block'
   const rt = document.getElementById('resultText')
   const yt = document.getElementById('yt')
@@ -36,6 +37,7 @@ async function addResult (q) {
     rt.innerText = 'Nothing found.'
     yt.src = 'https://www.youtube-nocookie.com/embed/bnH9Gbw4ybk?autoplay=1'
   }
+  document.body.style.cursor = 'auto'
 }
 
 document.addEventListener('DOMContentLoaded', event => {
