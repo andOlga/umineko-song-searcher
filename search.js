@@ -42,7 +42,7 @@ async function addResult (q) {
 
 document.addEventListener('DOMContentLoaded', event => {
   if (window.location.protocol === 'file:') {
-    document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Please use the executables instead.')
+    document.write('Please do not open index.html directly in a browser, as browser security policies won\'t allow the app to run correctly. Configure an actual web server instead.')
     return
   }
   document.getElementById('q').focus()
